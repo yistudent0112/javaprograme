@@ -7,12 +7,12 @@ import java.util.Scanner;
 /*
  * 
     * @ClassName: programe_7_37  
-    * @Description: TODO(½«Ò»¸öÕıÕûÊıN·Ö½â³É¼¸¸öÕıÕûÊıÏà¼Ó£¬
-    * ¿ÉÒÔÓĞ¶àÖÖ·Ö½â·½·¨£¬
-    * ÀıÈç7=6+1£¬7=5+2£¬7=5+1+1£¬¡­¡£
-    * ±à³ÌÇó³öÕıÕûÊıNµÄËùÓĞÕûÊı·Ö½âÊ½×Ó¡£)  
+    * @Description: TODO(å°†ä¸€ä¸ªæ­£æ•´æ•°Nåˆ†è§£æˆå‡ ä¸ªæ­£æ•´æ•°ç›¸åŠ ï¼Œ
+    * å¯ä»¥æœ‰å¤šç§åˆ†è§£æ–¹æ³•ï¼Œ
+    * ä¾‹å¦‚7=6+1ï¼Œ7=5+2ï¼Œ7=5+1+1ï¼Œâ€¦ã€‚
+    * ç¼–ç¨‹æ±‚å‡ºæ­£æ•´æ•°Nçš„æ‰€æœ‰æ•´æ•°åˆ†è§£å¼å­ã€‚)  
     * @author yi  
-    * @date 2018Äê4ÔÂ12ÈÕ  
+    * @date 2018å¹´4æœˆ12æ—¥  
     *
  */
 public class programe_7_37 {
@@ -30,48 +30,31 @@ public class programe_7_37 {
 	}
 
 	public static void Calculate(int n) {
-		if (GetSum() == N) {
-			/*
-			 * System.out.println(); for(int i=0;i<result.length;i++) {
-			 * System.out.print(result[i]+" "); } System.out.println();
-			 */
+		if (Sum == N) {
 			int[] temp = new int[N];
 			for (int i = 0; i < result.length; i++) {
 				temp[i] = result[i];
-				//result[i] = 0;
-			}
-			for(int i=Length-1;i<result.length;i++) {
-				result[i]=0;;
+				
 			}
 			results.add(temp);
 
-			Length = 0;
 			return;
-		} else if (GetSum() > N) {
+		} else if (Sum > N) {
 			return;
-		} else if (GetSum()< N) {
+		} else if (Sum < N) {
 			for (int j = n; j < N; j++) {
-				System.out.println("j is " + j);
-				System.out.println("Length is " + Length);
 				result[Length++] = j;
-				// System.out.println("result is "+result[Length]);			
-				Calculate(j);		
-				if (Length == 0) {
-
-				} else {
-					Length--;
-				}
+				Sum+=j;
+				Calculate(j);
+				Length--;
+				Sum-=j;
+				result[Length] = 0;
 			}
 		}
 
 	}
-   public static int GetSum() {
-	   Sum=0;
-	   for(int temp:result) {
-		   Sum+=temp;
-	   }
-	   return Sum;
-   }
+
+
 	public static void Print1() {
 		for (int[] temp : results) {
 			for (int i = 0; i < temp.length; i++) {
@@ -81,19 +64,20 @@ public class programe_7_37 {
 		}
 	}
 
+ 
 	public static void Print() {
 		for (int[] temp : results) {
 			System.out.print(N + "=");
 			int i;
-			for (i = 0; i < temp.length; i++) {
-				if (temp[i] != 0) {
-					System.out.print(temp[i]);
-				} else {
+			for (i = 0; i < temp.length-1; i++) {
+				if(temp[i+1]!=0) {
+					System.out.print(temp[i]+"+");
+				}else {
 					break;
 				}
-				System.out.print("+");
 			}
-			System.out.print("/n");
+			System.out.print(temp[i]);
+			System.out.printf("\n");
 		}
 	}
 
@@ -101,8 +85,8 @@ public class programe_7_37 {
 		// TODO Auto-generated method stub
 		Input();
 		Calculate(1);
-		//System.out.println(results.size());
-		Print1();
+		// System.out.println(results.size());
+		Print();
 	}
 
 }
