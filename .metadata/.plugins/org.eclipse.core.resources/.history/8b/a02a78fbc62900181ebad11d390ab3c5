@@ -1,0 +1,13 @@
+package Basical.program.set;
+
+public class sum_6_2 {
+public double f(int n,double []a,double x) {
+	double number=0.0;
+	return number;
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

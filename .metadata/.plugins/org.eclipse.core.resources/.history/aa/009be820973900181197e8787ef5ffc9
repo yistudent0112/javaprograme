@@ -1,0 +1,37 @@
+package Basical.program.set;
+
+public class programe_7_24_number {
+	private int number;
+	private int numbers[] = new int[20];
+
+	public programe_7_24_number(int number) {
+		this.number = number;
+	}
+
+	public void Count() {
+		int border = (int) Math.sqrt(number);
+		int j = 0;
+		for (int i = 2; i <= border; i++) {
+			if ((number % i) == 0) {
+				numbers[j] = i;
+				number = number / i;
+				j++;
+				i = 1;
+			}
+		}
+	}
+
+	public void print() {
+		for (int i = 0; i < numbers.length; i++) {
+			System.out.println(numbers[i]);
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		programe_7_24_number p = new programe_7_24_number(120);
+		p.Count();
+		p.print();
+	}
+
+}
