@@ -21,14 +21,28 @@ public class programe_7_37 {
 	private static int[] result;
 	private static int Sum = 0;
 	private static int Length = 0;
-
+/**
+ * 
+    * @Title: Input  
+    * @Description: TODO(读入一个参数)  
+    * @param     参数  
+    * @return void    返回类型  
+    * @throws
+ */
 	public static void Input() {
 		Scanner in = new Scanner(System.in);
 		N = in.nextInt();
 		result = new int[N];
 		in.close();
 	}
-
+/**
+ * 
+    * @Title: Calculate  
+    * @Description: TODO(利用递归算法，求出一个数的所有分解和)  
+    * @param @param n    参数  
+    * @return void    返回类型  
+    * @throws
+ */
 	public static void Calculate(int n) {
 		if (Sum == N) {
 			int[] temp = new int[N];
@@ -54,7 +68,14 @@ public class programe_7_37 {
 
 	}
 
-
+/**
+ * 
+    * @Title: Print1  
+    * @Description: TODO(打印求出的结果)  
+    * @param     参数  
+    * @return void    返回类型  
+    * @throws
+ */
 	public static void Print1() {
 		for (int[] temp : results) {
 			for (int i = 0; i < temp.length; i++) {
