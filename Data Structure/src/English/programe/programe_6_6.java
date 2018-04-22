@@ -75,7 +75,11 @@ public class programe_6_6 {
 	     queue.add(list.get(0));
 	     while(!queue.isEmpty()){
 	    	 Node currentNode=queue.poll();
-	    	 System.out.println(currentNode.Data);
+	    	 if(currentNode.Data==-1) {
+	    		 System.out.print("null"+" ");
+	    	 }else {
+	    	 System.out.print(currentNode.Data+" ");
+	    	 }
 	    	 //当前节点有左孩子时，左孩子入队列
 	    	 if(currentNode.LeftNode!=null){
 	    		 //System.out.println("left");
@@ -91,7 +95,9 @@ public class programe_6_6 {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+Input();
+CreateTree();
+LevelOrder();
 	}
 
 }
