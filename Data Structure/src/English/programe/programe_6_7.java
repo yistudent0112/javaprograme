@@ -121,6 +121,7 @@ public class programe_6_7 {
 				((Root1==null)&&(Root2!=null))) {
 			return false;
 		}
+		return false;
 	}
 
 	public static void main(String[] args) {
