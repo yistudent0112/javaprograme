@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="F:\java程序\PTAprograme2"/>
+		<item value="F:\java程序\Pat"/>
+		<item value="F:\java程序\Data Structure"/>
+		<item value="F:\java程序\PrepareForPta"/>
+		<item value="F:\java程序\ReadXml"/>
+	</list>
 	<section name="WORKBENCH_SETTINGS">
 		<list key="ENABLED_TRANSFERS">
 		</list>

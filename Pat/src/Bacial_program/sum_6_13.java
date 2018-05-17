@@ -35,7 +35,7 @@ public static int BinSearch(int []list,int key) {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
      int list[]= {1,2,3,4,6};
-     System.out.println(BinSearch(list, 6));
+     System.out.println(BinSearch(list, 5));
 	}
 
 }

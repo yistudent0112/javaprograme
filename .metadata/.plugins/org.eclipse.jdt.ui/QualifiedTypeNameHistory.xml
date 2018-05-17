@@ -9,7 +9,6 @@
 <fullyQualifiedTypeName name="Basical.program.set.programe_7_24_number"/>
 <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="org.jdom2.input.SAXBuilder"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
@@ -30,4 +29,9 @@
 <fullyQualifiedTypeName name="com.imooc.yi.DomTest"/>
 <fullyQualifiedTypeName name="com.imooc.yi.Dom4jTest"/>
 <fullyQualifiedTypeName name="com.imooc.yi.JdomTest"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="English.programe.programe_6_8_priority_queue"/>
+<fullyQualifiedTypeName name="English.programe.programe_6_8_priority_queue2"/>
+<fullyQualifiedTypeName name="English.programe.programe_6_8_priority_queue3"/>
 </qualifiedTypeNameHistroy>
