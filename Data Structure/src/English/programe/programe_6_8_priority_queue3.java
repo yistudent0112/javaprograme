@@ -12,7 +12,14 @@ public class programe_6_8_priority_queue3 {
 		Capcity = n;
 		arr = new int[n];
 	}
-
+/**
+ * 
+    * @Title: IsFull  
+    * @Description: TODO(判断这个队列是否已满)  
+    * @param @return    参数  
+    * @return boolean    返回类型  
+    * @throws
+ */
 	public boolean IsFull() {
 		boolean flag = true;
 		if (Length < Capcity) {
@@ -20,7 +27,14 @@ public class programe_6_8_priority_queue3 {
 		}
 		return flag;
 	}
-
+/**
+ * 
+    * @Title: IsEmpty  
+    * @Description: TODO(判断这个队列是否为空)  
+    * @param @return    参数  
+    * @return boolean    返回类型  
+    * @throws
+ */
 	public boolean IsEmpty() {
 		boolean flag = true;
 		if (Length > 0) {
@@ -28,7 +42,14 @@ public class programe_6_8_priority_queue3 {
 		}
 		return flag;
 	}
-
+/**
+ * 
+    * @Title: AddElement  
+    * @Description: TODO(向对列中添加一个元素)  
+    * @param @param number    参数  
+    * @return void    返回类型  
+    * @throws
+ */
 	public void AddElement(int number) {
 		if (!IsFull()) {
 			arr[Length] = number;
@@ -36,7 +57,14 @@ public class programe_6_8_priority_queue3 {
 			Length++;
 		}
 	}
-
+/**
+ * 
+    * @Title: DeleteElement  
+    * @Description: TODO(从队列中除去一个元素)  
+    * @param @return    参数  
+    * @return int    返回类型  
+    * @throws
+ */
 	public int DeleteElement() {
 		int number = -1;
 		if (!IsEmpty()) {
@@ -47,14 +75,28 @@ public class programe_6_8_priority_queue3 {
 		}
 		return number;
 	}
-
+/**
+ * 
+    * @Title: swim  
+    * @Description: TODO(上浮函数，使数值小的数从后面的位置到前面的位置去)  
+    * @param @param index    参数  
+    * @return void    返回类型  
+    * @throws
+ */
 	public void swim(int index) {
 		while (index > 0 && Compare(index, index / 2)) {
 			swap(index, index / 2);
 			index = index / 2;
 		}
 	}
-
+/**
+ * 
+    * @Title: sink  
+    * @Description: TODO(下沉函数，使数值大的数从前面的位置沉到后面的位置去)  
+    * @param @param index    参数  
+    * @return void    返回类型  
+    * @throws
+ */
 	public void sink(int index) {
 		while (2 * index <= Length) {
 			int j = 2 * index;
@@ -65,9 +107,21 @@ public class programe_6_8_priority_queue3 {
 				swap(j, index);
 			}
 			index = j;
+			if(index==0) {
+				return;
+			}
 		}
 	}
-
+/**
+ * 
+    * @Title: Compare  
+    * @Description: TODO(比较函数，如果第一个参数所代表的值大，则返回false)  
+    * @param @param index1
+    * @param @param index2
+    * @param @return    参数  
+    * @return boolean    返回类型  
+    * @throws
+ */
 	public boolean Compare(int index1, int index2) {
 		boolean flag = false;
 		if (arr[index1] > arr[index2]) {
@@ -75,7 +129,15 @@ public class programe_6_8_priority_queue3 {
 		}
 		return flag;
 	}
-
+/**
+ * 
+    * @Title: swap  
+    * @Description: TODO(交换函数，对传进来的数进行互换)  
+    * @param @param index1
+    * @param @param index2    参数  
+    * @return void    返回类型  
+    * @throws
+ */
 	public void swap(int index1, int index2) {
 		int temp = arr[index1];
 		arr[index1] = arr[index2];
@@ -94,7 +156,7 @@ public class programe_6_8_priority_queue3 {
 		System.out.println(p.DeleteElement());
 		System.out.println(p.DeleteElement());
 		System.out.println(p.DeleteElement());
-	//	System.out.println(p.DeleteElement());
+		System.out.println(p.DeleteElement());
 		System.out.println(p.DeleteElement());
 	}
 
