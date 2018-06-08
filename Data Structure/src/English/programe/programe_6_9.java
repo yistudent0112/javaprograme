@@ -30,10 +30,11 @@ public class programe_6_9 {
 
 	public static void ReadList() {
 		Scanner in = new Scanner(System.in);
-		System.out.println("please input the length of the String");
+		System.out.println("please input the length of the String"
+				+ "(can not smaller than 2)");
 		ListLength = in.nextInt();
 		List = new String[ListLength];
-		Copy=new String[ListLength];
+		Copy = new String[ListLength];
 		KeySet = new HashSet<String>();
 		for (int i = 0; i < ListLength; i++) {
 			String word = in.next();
@@ -46,7 +47,7 @@ public class programe_6_9 {
 	/**
 	 * 
 	 * @Title: AddKey @Description: TODO ( 把新加入的不同可以保存到一个set容器中去 ) @param @param key
-	 * 参数 @return void 返回类型 @throws
+	 *         参数 @return void 返回类型 @throws
 	 */
 	public static void AddKey(String key) {
 		if (!KeySet.contains(key)) {
@@ -57,7 +58,7 @@ public class programe_6_9 {
 	/**
 	 * 
 	 * @Title: SaveKey @Description: TODO ( 把set容器转换成一个数组，这样方便key值得取出 ) @param
-	 * 参数 @return void 返回类型 @throws
+	 *         参数 @return void 返回类型 @throws
 	 */
 	public static void SaveKey() {
 		KeyList = new String[KeySet.size()];
@@ -70,16 +71,27 @@ public class programe_6_9 {
 			System.out.println(KeyList[i]);
 		}
 	}
-
+/**
+ * 
+    * @Title: PrintList  
+    * @Description: TODO
+    * (
+    * 顺序存有关键字的KeyList数组，并把关键字拿出来与copy数组中的信息进行比较
+    * 并按照顺序把各关键字在copy数组中所占位置信息打印出来
+    * )  
+    * @param     参数  
+    * @return void    返回类型  
+    * @throws
+ */
 	public static void PrintList() {
 		int i, k, length;
 		i = k = 0;
 		length = Copy.length;
-		for(int j=0;j<KeyLength;j++) {
+		for (int j = 0; j < KeyLength; j++) {
 			for (; i < length && Copy[i].equals(KeyList[j]); i++)
 				;
 			if (i > k) {
-				System.out.printf(KeyList[j]+" in A[%d]-A[%d]\n", k, i - 1);
+				System.out.printf(KeyList[j] + " in A[%d]-A[%d]\n", k, i - 1);
 			}
 			k = i;
 		}
@@ -91,7 +103,7 @@ public class programe_6_9 {
 	/**
 	 * 
 	 * @Title: PrintA @Description: TODO ( 打印经过sortList函数排序过的 string数组 ) @param
-	 * 参数 @return void 返回类型 @throws
+	 *         参数 @return void 返回类型 @throws
 	 */
 	public static void PrintA() {
 		int i, k, length;
@@ -118,39 +130,74 @@ public class programe_6_9 {
 			System.out.println("wrong answer.");
 		}
 	}
-public static void SortList(int front,int rear,int keyfront,int keyrear) {
-	if(Math.abs(rear-front)==1) {
-		return;	
-	}
-	else {
-		boolean FrontFound=false;
-		boolean RearFound=false;
-		for(int i=0;i<List.length;i++) {
-			if(List[i].equals(KeyList[keyfront])) {
-				Copy[front++]=List[i];
-				FrontFound=true;
-			}
-			else if(List[i].equals(KeyList[keyrear])) {
-				Copy[rear--]=List[i];
-				RearFound=true;
-			}
-		}
-		if(FrontFound) {
-			keyfront++;
-		}
-		if(RearFound) {
-			keyrear--;
-		}
-		SortList(front,rear,keyfront,keyrear);
-	}
-}
 	/**
 	 * 
-	 * @Title: SortList @Description: TODO ( 对string数组list进行排序
-	 * 把为false的值放置在数组的前部，为true的值放置在数组的后部 为其他任意情况的值，把值改为maybe之后放置在false和true的值之间
-	 * 最后把修改后的数组复制给原先的数组list 完成对string数组list的排序
+	    * @Title: SortList  
+	    * @Description: TODO
+	    * (
+	    *  对读入的数组进行排序，排序按照关键字数组KeyList中的顺序来排序
+	    *  把排序好的数组赋值给copy数组
+	    *  注：当数组长度为偶数时，正常递归调用此函数不会出现问题
+	    *  当数组长度为奇数时，会导致上下界为同一个数，此时会漏判处于数组中间位置的那一个元素
+	    *  所以把跳出的递归条件改为上界和下届的的差的绝对值为一
+	    *  以此来避免数组长度为奇数时所产生的问题
+	    * )  
+	    * @param @param front
+	    * @param @param rear
+	    * @param @param keyfront
+	    * @param @param keyrear    参数  
+	    * @return void    返回类型  
+	    * @throws
+	 */
+	public static void SortList(int front, int rear, int keyfront, int keyrear) {
+		//跳出递归的判断条件
+		if (Math.abs(rear - front) == 1) {
+			return;
+		} else {
+			//用来标记有没有在数组中找到前部关键字对应的信息
+			boolean FrontFound = false;
+			//用来标记有没有在数组中找到后部关键字对应的信息
+			boolean RearFound = false;
+			for (int i = 0; i < List.length; i++) {
+				//若找到前部关键字对应的信息，则将其放置在copy数组的前部，并修改标记信息
+				if (List[i].equals(KeyList[keyfront])) {
+					Copy[front++] = List[i];
+					FrontFound = true;
+				} 
+				//若找到后部关键字对应的信息，则将其放置在copy数组的后部，并修改标记信息
+				else if (List[i].equals(KeyList[keyrear])) {
+					Copy[rear--] = List[i];
+					RearFound = true;
+				}
+			}
+			//若前部查找标记为真，则将前部查找下标加一
+			if (FrontFound) {
+				keyfront++;
+			}
+			//若后部查找标记为真，则将后部查找下标减一
+			if (RearFound) {
+				keyrear--;
+			}
+			//递归调用函数
+			SortList(front, rear, keyfront, keyrear);
+		}
+	}
+
+	/**
 	 * 
-	 * ) @param 参数 @return void 返回类型 @throws
+	 * @Title: SortList 
+	 * @Description: TODO 
+	 * ( 
+	 * 对string数组list进行排序
+	 * 把为false的值放置在数组的前部，为true的值放置在数组的后部
+	        为其他任意情况的值，把值改为maybe之后放置在false和true的值之间
+	         最后把修改后的数组复制给原先的数组list
+	 * 完成对string数组list的排序
+	 * 
+	 *         ) 
+	 * @param 参数
+	 * @return void 返回类型
+	 * @throws
 	 */
 	public static void SortList() {
 		// 复制数组的前部下标
@@ -183,10 +230,10 @@ public static void SortList(int front,int rear,int keyfront,int keyrear) {
 		// TODO Auto-generated method stub
 		ReadList();
 		SaveKey();
-		SortList(0,List.length-1,0,KeyLength-1);
+		SortList(0, List.length - 1, 0, KeyLength - 1);
 		PrintList();
-	
-		//PrintKey();
+
+		// PrintKey();
 	}
 
 }
