@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="F:\java程序\线程程序\线程_买票程序\src"/>
+		<item value="F:\java程序\线程程序\线程_买票程序3_有问题\src\线程_买票程序3"/>
+		<item value="F:\java程序\线程程序\线程_2_构建线程的方法二"/>
+		<item value="F:\java程序\线程程序\线程_1_构建线程的方法一"/>
 		<item value="F:\java程序\PTAprograme2"/>
 		<item value="F:\java程序\Pat"/>
 		<item value="F:\java程序\Data Structure"/>
