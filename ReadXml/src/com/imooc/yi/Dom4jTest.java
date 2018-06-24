@@ -11,10 +11,16 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 public class Dom4jTest {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-//解析books.xml文件
+/**
+ * 
+    * @Title: XmlParse  
+    * @Description: TODO(Xml文件解析函数)  
+    * @param     参数  
+    * @return void    返回类型  
+    * @throws
+ */
+	public void XmlParse() {
+        //解析books.xml文件
 		//创建SAXReader的对象reader
 		SAXReader reader=new SAXReader();
 		try {
@@ -56,4 +62,8 @@ public class Dom4jTest {
 		}
 	}
 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
 }

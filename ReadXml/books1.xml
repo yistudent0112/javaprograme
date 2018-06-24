@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><BookList>
+<Book ID="1">
+<Name>白银时代</Name>
+<Catgory>当代</Catgory>
+<Description>王小波的时代三部曲</Description>
+<Price>20</Price>
+</Book>
+<Book ID="2">
+<Name>明朝那些事</Name>
+<Catgory>历史</Catgory>
+<Description>趣味历史</Description>
+<Price>50</Price>
+</Book>
+</BookList>
