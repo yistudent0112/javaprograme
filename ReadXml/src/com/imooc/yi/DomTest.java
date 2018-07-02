@@ -69,5 +69,16 @@ public class DomTest {
 		}
 
 	}
+	/**
+	 * 
+	    * @Title: CreatXml  
+	    * @Description: TODO(创建XML文件)  
+	    * @param     参数  
+	    * @return void    返回类型  
+	    * @throws
+	 */
+	public void CreatXml() {
+		
+	}
 
 }
