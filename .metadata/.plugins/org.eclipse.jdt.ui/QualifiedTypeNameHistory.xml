@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="Basical.program.set.programe_7_1_Inch"/>
-<fullyQualifiedTypeName name="Basical.program.set.programe_7_2_Time"/>
 <fullyQualifiedTypeName name="Basical.program.set.programe_7_10_Worker"/>
 <fullyQualifiedTypeName name="java.util.concurrent.CountDownLatch"/>
 <fullyQualifiedTypeName name="javax.xml.soap.SAAJResult"/>
@@ -13,10 +11,8 @@
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="org.jdom2.Attribute"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="org.dom4j.io.SAXReader"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.dom4j.Attribute"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.util.Timer"/>
@@ -27,7 +23,6 @@
 <fullyQualifiedTypeName name="English.programe.programe_6_8_priority_queue2"/>
 <fullyQualifiedTypeName name="English.programe.programe_6_8_priority_queue3"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="javax.xml.transform.TransformerFactory"/>
 <fullyQualifiedTypeName name="javax.xml.crypto.dsig.Transform"/>
 <fullyQualifiedTypeName name="org.jdom2.transform.JDOMSource"/>
@@ -51,4 +46,18 @@
 <fullyQualifiedTypeName name="org.jdom2.output.EscapeStrategy"/>
 <fullyQualifiedTypeName name="org.jdom2.Element"/>
 <fullyQualifiedTypeName name="org.jdom2.CDATA"/>
+<fullyQualifiedTypeName name="English.programe.programe_6_9_Arc"/>
+<fullyQualifiedTypeName name="English.programe.programe_6_9_Node"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="com.yi.array.Array6"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.yi.array.Array7"/>
+<fullyQualifiedTypeName name="com.yi.array.Array8"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="com.yi.array.Array9"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.lang.Character"/>
+<fullyQualifiedTypeName name="com.yi.array.Array11"/>
 </qualifiedTypeNameHistroy>
