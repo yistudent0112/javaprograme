@@ -22,7 +22,7 @@ package com.yi.String;
     *
  */
 public class String6 {
-	public int myAtoi(String str) {
+    public int myAtoi(String str) {
         long number=0;
         int sign=1;
         int wrong=0;
@@ -30,60 +30,52 @@ public class String6 {
         char[]str1=str.toCharArray();
         for(int i=0;i<str.length();i++) {
         	if(buffer.length()==0) {
-        		if(str1[i]=='-'&&i<str.length()-1) {
+        		if(str1[i]=='-') {
         		sign=-1;
-                    wrong++;
-                         if(!(str1[i+1]>='0'&&str1[i+1]<='9')){
-                        return (int)number;
-                    }
-                  
+                 wrong++;
         		}
-        		else if(str1[i]=='+'&&i<str.length()-1) {
+        		else if(str1[i]=='+') {
         			sign=1;
-                    wrong++;
-                         if(!(str1[i+1]>='0'&&str1[i+1]<='9')){
-                        return (int)number;
-                    }
-                  
-        		}      
-                else if(wrong>1){
-                    return (int)number;
-                }
-                else if(str1[i]>='a'&&str1[i]<='z'||str1[i]=='.'){
+        		wrong++;
+        		}
+        		if(wrong>1) {
+        			return (int)number;
+        		}
+        		else if(str1[i]=='0') {
+                      if(!(str1[i+1]>='0'&&str1[i+1]<='9')) {
+                    	  return (int)number;
+                 	   }
+        		}
+        		else if(str1[i]>='a'&&str1[i]<='z'||str1[i]=='.') {
         			return (int)number;
         		}
         		else if(str1[i]>'0'&&str1[i]<='9') {
           		buffer.append(str1[i]);
           	   }
-                else if(str1[i]=='0'&&i<str.length()-1){
-                    if(!(str1[i+1]>='0'&&str1[i+1]<='9')){
-                        return (int)number;
-                    }
-                }
         	}else {
         	  if(str1[i]>='0'&&str1[i]<='9') {
         		buffer.append(str1[i]);
-        	   }else{
-                  break;
-              }
+        	   }
+        	  else {
+        		  break;
+        	  }
         	}
         }
-        if(buffer.length()>0&&buffer.length()<20) {
-        	number=Long.valueOf(buffer.toString());
+        if(buffer.length()>0&&buffer.length()<18) {
+        	number=Long.valueOf(buffer.toString()).longValue();
         }
-        if((number>Integer.MAX_VALUE&&sign==1)||(buffer.length()>19&&sign==1)) {
+        if(number>Integer.MAX_VALUE&&sign==1) {
         	return  Integer.MAX_VALUE*sign ;
-        }else if((number>Integer.MAX_VALUE&&sign==-1)||(buffer.length()>19&&sign==-1)) {
+        }else if(number>Integer.MAX_VALUE&&sign==-1) {
         	return  (Integer.MAX_VALUE+1)*sign ;
         }
+
         return (int)number*sign;
     }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 String6 test=new String6();
-test.myAtoi("-9223372036854775809");
-                                
-System.out.println(Long.valueOf("-922337203685477580"));
+test.myAtoi("   +0 123");
 	}
 
 }
