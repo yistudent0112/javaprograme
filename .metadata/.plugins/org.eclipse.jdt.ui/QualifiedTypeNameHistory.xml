@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.dom4j.io.SAXReader"/>
-<fullyQualifiedTypeName name="org.dom4j.Attribute"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.util.Timer"/>
 <fullyQualifiedTypeName name="com.imooc.yi.DomTest"/>
@@ -36,10 +34,7 @@
 <fullyQualifiedTypeName name="org.jdom2.CDATA"/>
 <fullyQualifiedTypeName name="English.programe.programe_6_9_Arc"/>
 <fullyQualifiedTypeName name="English.programe.programe_6_9_Node"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="com.yi.array.Array6"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.yi.array.Array7"/>
 <fullyQualifiedTypeName name="com.yi.array.Array8"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
@@ -60,4 +55,9 @@
 <fullyQualifiedTypeName name="com.yi.thread.EnergySystem"/>
 <fullyQualifiedTypeName name="com.yi.thread.EnergyTransferTask"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.yi.ArraysAndString.ArraysAndString1"/>
+<fullyQualifiedTypeName name="com.yi.ArraysAndString.ArraysAndString2"/>
 </qualifiedTypeNameHistroy>
