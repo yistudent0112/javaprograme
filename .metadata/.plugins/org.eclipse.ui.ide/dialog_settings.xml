@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="F:\java程序\ChatPrograme"/>
+		<item value="F:\java程序\SocketPrograme"/>
 		<item value="F:\java程序\Poker"/>
 		<item value="E:\java程序\ReadXml"/>
 		<item value="F:\java程序\线程程序\线程_买票程序\src"/>
