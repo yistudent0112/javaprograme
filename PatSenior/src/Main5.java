@@ -22,13 +22,13 @@ public class Main5 {
 			list.add(set);
 		}
 		int compare=in.nextInt();
-		List<Integer>listMap=new ArrayList<Integer>();
+		int []listmap=new int[compare*2];
 		for(int i=0;i<2*compare;i++) {
-		listMap.add(in.nextInt());
+		listmap[i]=in.nextInt();
 		}
 		in.close();
 		for(int i=0;i<compare*2;i=i+2) {
-			System.out.printf("%.1f",calculatePercent(listMap.get(i)-1,listMap.get(i+1)-1, list)*100);
+			System.out.printf("%.1f",calculatePercent(listmap[i]-1,listmap[i+1]-1, list)*100);
 			System.out.println("%");
 		}
 //Set<Integer>set=new HashSet<Integer>();
