@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="English.programe.programe_6_9_Arc"/>
-<fullyQualifiedTypeName name="English.programe.programe_6_9_Node"/>
-<fullyQualifiedTypeName name="com.yi.array.Array6"/>
-<fullyQualifiedTypeName name="com.yi.array.Array7"/>
-<fullyQualifiedTypeName name="com.yi.array.Array8"/>
-<fullyQualifiedTypeName name="com.yi.array.Array9"/>
-<fullyQualifiedTypeName name="com.yi.array.Array11"/>
 <fullyQualifiedTypeName name="com.yi.String.String6"/>
 <fullyQualifiedTypeName name="com.yi.thread.Actor"/>
 <fullyQualifiedTypeName name="com.yi.thread.Actress"/>
@@ -52,7 +45,6 @@
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
@@ -60,4 +52,12 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.lang.Comparable"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="com.yi.test.Calculator"/>
+<fullyQualifiedTypeName name="org.junit.Ignore"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="org.junit.jupiter.api.Disabled"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="org.junit.jupiter.api.Assertions"/>
+<fullyQualifiedTypeName name="java.time.Duration"/>
 </qualifiedTypeNameHistroy>
